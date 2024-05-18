@@ -4,58 +4,25 @@
              x:Class="jgarciaS6.Views.vEstudiante"
              Title="vEstudiante">
 
-
-
-    <!-- <VerticalStackLayout>
-        <Label 
+    <VerticalStackLayout>
+        <Label
             Text="CONSUMO DE REST"
             FontSize="24"
-            HorizontalTextAlignment="Center"/>
+            HorizontalTextAlignment="Center"
+            Grid.Row="0"/>
 
-        <ListView x:Name="ListaEstudiantes">
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <ViewCell>
-                        <StackLayout>
-                            <Label x:Name="lblNombre" Text="{Binding nombre}"/>
-                            <Label x:Name="lblapellido" Text="{Binding apellido}"/>
-                        </StackLayout>
-                    </ViewCell>
-                </DataTemplate>
-            </ListView.ItemTemplate>
-        </ListView>
-     </VerticalStackLayout> -->
+        <Button x:Name="btnAgregarEstudiante" Text="Agregar Estudiante" Clicked="btnAgregarEstudiante_Clicked"/>
 
-    <VerticalStackLayout>
-        <Label Text="CONSUMO DE REST"
-               FontSize="24"
-               HorizontalTextAlignment="Center" />
-        <Grid>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="Auto"/>
-                <RowDefinition Height="*"/>
-            </Grid.RowDefinitions>
-            <Label
-        Text="CONSUMO DE REST"
-        FontSize="24"
-        HorizontalTextAlignment="Center"
-        Grid.Row="0"/>
-
-            
-            <ScrollView Grid.Row="1">
-                <StackLayout>
-                    
-                    <StackLayout Orientation="Horizontal" Padding="10">
-                        <Label Text="Código" FontAttributes="Bold" WidthRequest="80"/>
-                        <Label Text="Nombre" FontAttributes="Bold" WidthRequest="120"/>
-                        <Label Text="Apellido" FontAttributes="Bold" WidthRequest="120"/>
-                        <Label Text="Edad" FontAttributes="Bold" WidthRequest="60"/>
-                    </StackLayout>
-
-                   
-                    <StackLayout x:Name="EstudiantesStackLayout" Padding="10"/>
+        <ScrollView Grid.Row="1">
+            <StackLayout>
+                <StackLayout Orientation="Horizontal" Padding="10">
+                    <Label Text="Código" FontAttributes="Bold" WidthRequest="80"/>
+                    <Label Text="Nombre" FontAttributes="Bold" WidthRequest="120"/>
+                    <Label Text="Apellido" FontAttributes="Bold" WidthRequest="120"/>
+                    <Label Text="Edad" FontAttributes="Bold" WidthRequest="60"/>
                 </StackLayout>
-            </ScrollView>
-        </Grid>
+                <StackLayout x:Name="EstudiantesStackLayout" Padding="10"/>
+            </StackLayout>
+        </ScrollView>
     </VerticalStackLayout>
 </ContentPage>
